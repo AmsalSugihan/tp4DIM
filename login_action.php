@@ -11,7 +11,8 @@
 	$u->setUsername (trim(strip_tags($_POST["username"])));
 	$u->setPassword (trim(strip_tags($_POST["password"])));	
 	$data = $u->Authentication();
-	
+	// var_dump($data);
+	// die;
 	if(!empty($data)){
 		foreach ($data as $key => $value) {
 
@@ -31,19 +32,20 @@
 				// redirect berdasarkan level user
 				header ("location:manager/index.php");
 			}
-			elseif($value['id_bagian'] == '9')
+			elseif($value['id_bagian'] == '12')
 			{
 				 //redirect berdasarkan level user
 				header ("location:gudang/index.php");
 			}
-			elseif($value['id_bagian'] == '11')
+			elseif($value['id_bagian'] == '12')
 			{
 				// redirect berdasarkan level user
 				header ("location:produksi/index.php");
 			}
-			elseif($value['id_bagian'] == '10')
+			elseif($value['id_bagian'] == '9')
 			{
 				// redirect berdasarkan level user
+				$_SESSION['bagian_name'] = 'tukang_pesan';
 				header ("location:tukang_pesan/index.php");
 			}
 		/*	elseif($value['id_level'] == '6')
