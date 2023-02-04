@@ -1,6 +1,6 @@
 <?php
 	include "../session_admin.php";
-  include "../../page_layout/headSecond.php";
+    include "../../page_layout/headSecond.php";
 ?>
 
 <!-- Content Header (Page header) -->

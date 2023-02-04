@@ -39,7 +39,6 @@ include "../../class/bagian.php";
                     	<input type="text" class="form-control" id="nama_bagian" name="nama_bagian" value="<?php echo $value['nama_bagian']; ?>">
                     </div>
                 </div>
-                <br>
                 <div class="form-group">
                 	<div class="col-md-7 col-md-offset-2">
                 		<input type="submit" class="btn btn-md btn-primary" name="update" value="Update" >
