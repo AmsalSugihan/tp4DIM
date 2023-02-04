@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2016 at 05:17 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.23
+-- Generation Time: Feb 04, 2023 at 09:39 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -98,10 +99,11 @@ CREATE TABLE `pegawai` (
 INSERT INTO `pegawai` (`id_pegawai`, `username`, `password`, `nama_pegawai`, `alamat_pegawai`, `hp_pegawai`, `id_bagian`) VALUES
 (7, 'admin', 'admin', 'administrator', 'kantor', '085214021108', 1),
 (9, 'satria', 'admin', 'satria', 'semarang', '085214021108', 7),
-(10, 'amir', 'amir', 'amir', 'semarang', '08080808', 8),
+(10, 'amir', 'amir', 'amir', 'semarang', '0808080809090', 8),
 (11, 'anin', 'anin', 'anin', 'semarang', '004859', 10),
 (14, 'sandi', 'sandi', 'sandi', 'semarang', '009', 9),
-(15, 'mini', 'mini', 'mini', 'semarang', '006', 11);
+(15, 'mini', 'mini', 'mini', 'semarang', '006', 11),
+(16, 'gudang', 'gudang', 'gudang', 'gudang', 'gudangss', 12);
 
 -- --------------------------------------------------------
 
@@ -196,6 +198,60 @@ INSERT INTO `pemesanan` (`id_pesanan`, `nama_pemesan`, `id_barang`, `jumlah_pesa
 (174, 'raja tulis', 138, '10', 3, '4000'),
 (175, 'deprintz', 138, '15', 3, '5000');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengambilan`
+--
+
+CREATE TABLE `pengambilan` (
+  `id_pengambilan` int(16) NOT NULL,
+  `nama_pengambil` varchar(32) NOT NULL,
+  `id_barang` int(16) NOT NULL,
+  `jumlah_pengambilan` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengambilan`
+--
+
+INSERT INTO `pengambilan` (`id_pengambilan`, `nama_pengambil`, `id_barang`, `jumlah_pengambilan`) VALUES
+(4, 'mandiri cabang pahlawan', 137, '200'),
+(5, 'mandiri cabang pahlawan', 138, '100'),
+(6, 'amsal', 143, '2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produksi`
+--
+
+CREATE TABLE `produksi` (
+  `id_produksi` int(16) NOT NULL,
+  `id_pesanan` int(16) NOT NULL,
+  `id_barang` int(16) NOT NULL,
+  `jumlah_produksi` varchar(16) NOT NULL,
+  `lead_time` varchar(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `produksi`
+--
+
+INSERT INTO `produksi` (`id_produksi`, `id_pesanan`, `id_barang`, `jumlah_produksi`, `lead_time`) VALUES
+(69, 96, 137, '600', '1'),
+(70, 70, 137, '1000', '3'),
+(71, 69, 137, '1000', '3'),
+(72, 69, 137, '1000', '3'),
+(73, 97, 137, '600', '2'),
+(74, 90, 137, '1050', '3'),
+(75, 79, 138, '1000', '3'),
+(76, 63, 138, '1000', '3'),
+(77, 76, 138, '55', '1'),
+(78, 88, 138, '50', '1'),
+(79, 61, 138, '50', '1'),
+(80, 94, 138, '5000', '4');
+
 --
 -- Indexes for dumped tables
 --
@@ -229,6 +285,18 @@ ALTER TABLE `pemesanan`
   ADD UNIQUE KEY `id_pesanan` (`id_pesanan`);
 
 --
+-- Indexes for table `pengambilan`
+--
+ALTER TABLE `pengambilan`
+  ADD PRIMARY KEY (`id_pengambilan`);
+
+--
+-- Indexes for table `produksi`
+--
+ALTER TABLE `produksi`
+  ADD PRIMARY KEY (`id_produksi`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -237,21 +305,38 @@ ALTER TABLE `pemesanan`
 --
 ALTER TABLE `bagian`
   MODIFY `id_bagian` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
   MODIFY `id_barang` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+
 --
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id_pegawai` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_pegawai` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
   MODIFY `id_pesanan` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=176;
+
+--
+-- AUTO_INCREMENT for table `pengambilan`
+--
+ALTER TABLE `pengambilan`
+  MODIFY `id_pengambilan` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `produksi`
+--
+ALTER TABLE `produksi`
+  MODIFY `id_produksi` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
