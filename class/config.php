@@ -1,5 +1,5 @@
 <?php
-	include "parser-php-version.php"; 
+	include "parser-php-version.php";
 	class database
 	{
 		private $server = "localhost";

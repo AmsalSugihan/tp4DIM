@@ -37,6 +37,7 @@
 			elseif($value['id_bagian'] == '12')
 			{
 				 //redirect berdasarkan level user
+				 $_SESSION['bagian_name'] = 'gudang';
 				header ("location:gudang/index.php");
 			}
 			elseif($value['id_bagian'] == '12')

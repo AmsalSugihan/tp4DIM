@@ -1,6 +1,6 @@
 <!-- Mulai Tabel -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
 	<div class="row">
         <div class="col-md-7 col-md-offset-2">
             <div class="table-responsive">
@@ -32,3 +32,42 @@
         </div>
 	</div>
 </div>
+ -->
+
+<div class="card-body">
+        <table class="table table-bordered table-striped list_datatable">
+            <thead>        
+                <tr>
+                    <th> </th>
+                    <th> Nama Barang </th>
+                    <th> Jumlah Produksi </th>
+                    <th> Jumlah Pengambilan </th>
+                    <th> Stok Barang </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <?php
+                    foreach ($DataStok as $key => $data) {
+                ?>
+                        <td> <?php echo $key+1 ?> </td>
+                        <td> <?php echo $data["nama_barang"] ?> </td>
+                        <td> <?php echo $data["total_produksi"] ?> </td>
+                        <td> <?php echo $data["total_pengambilan"] ?> </td>
+                        <td> <?php echo $data["stok_barang"] ?> </td>
+                </tr>
+                    <?php
+                    }
+                ?>   
+            </tbody> 
+            <tfoot>
+                <tr>
+                    <th> </th>
+                    <th> Nama Barang </th>
+                    <th> Jumlah Produksi </th>
+                    <th> Jumlah Pengambilan </th>
+                    <th> Stok Barang </th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>

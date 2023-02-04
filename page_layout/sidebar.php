@@ -91,6 +91,36 @@
                     </a>
                 </li>
             <?php } ?>
+
+            <?php if($_SESSION['bagian'] == '12'){?>
+                <li class="nav-item">
+                    <a href="<?php echo $_SESSION['siteUrl']?>/gudang/index.php" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
+                        <p>
+                        Home
+                        <!-- <span class="right badge badge-danger">New</span> -->
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?php echo $_SESSION['siteUrl']?>/gudang/stok.php" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                        Stok barang
+                        <!-- <span class="right badge badge-danger">New</span> -->
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?php echo $_SESSION['siteUrl']?>/gudang/pengambilan.php" class="nav-link">
+                        <i class="nav-icon fas fa-box"></i>
+                        <p>
+                        Pengambilan
+                        <!-- <span class="right badge badge-danger">New</span> -->
+                        </p>
+                    </a>
+                </li>
+            <?php } ?>
             <!-- 
             <li class="nav-header">LABELS</li>
             <li class="nav-item">

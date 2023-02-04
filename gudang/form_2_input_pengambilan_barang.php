@@ -1,6 +1,6 @@
 <!-- mulai form -->
 <?php
-	include "../pesanan/pesanan_konek.php";
+	include "pengambilan_konek.php";
 ?>
     <div class="container-fluid">
     	<div class="col-md-7 col-md-offset-2">
@@ -8,15 +8,13 @@
     			<legend> Form Input Pengambilan </legend>
                 
                 <div class="form-group">
-                	<label for="nama instansi" class="col-md-3"> Pengambilan Barang  </label>
+                	<label for="nama instansi" class="col-md-4"> Pengambilan Barang  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="jumlah pengambilan" placeholder="Nama yang Mengambil Pesanan" name="nama_pengambil">
                     </div>
                 </div>
-                <br>
-
                 <div class="form-group">
-                	<label for="nama_barang" class="col-md-3"> Nama Barang  </label>
+                	<label for="nama_barang" class="col-md-4"> Nama Barang  </label>
                 	<div class="col-md-7">
                     	<select class="form-control" name="id_barang" id="nama_barang">
                           	<option value="">----- Nama Barang Yang diambil -----</option>
@@ -30,19 +28,13 @@
 
                     </div>
                 </div>
-                <br>
-
-                
                                 
                 <div class="form-group">
-                	<label for="jumlah pesanan" class="col-md-3"> Jumlah Pengambilan  </label>
+                	<label for="jumlah pesanan" class="col-md-4"> Jumlah Pengambilan  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="jumlah pengambilan" placeholder="Jumlah Pengambilan Barang dalam angka" name="jumlah_pengambilan">
                     </div>
                 </div>
-                <br>
-
-                
                 <div class="form-group">
                 	<div class="col-md-7 col-md-offset-2">
                 		<a href="bagian.php">
