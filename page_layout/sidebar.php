@@ -23,31 +23,35 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <?php if($_SESSION['bagian'] == '9'){?>
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+            <?php if($_SESSION['bagian'] == '9'){?>
+                <li class="nav-item">
+                    <a href="../tukang_pesan/index.php" class="nav-link">
+                        <i class="nav-icon fas fa-home"></i>
                         <p>
                         Home
                         <!-- <span class="right badge badge-danger">New</span> -->
                         </p>
                     </a>
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="../tukang_pesan/pesanan.php" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
                         <p>
                         Pesan Barang
                         <!-- <span class="right badge badge-danger">New</span> -->
                         </p>
                     </a>
-                    <a href="pages/widgets.html" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="../tukang_pesan/barang_form.php" class="nav-link">
+                        <i class="nav-icon fas fa-box"></i>
                         <p>
                         Barang Baru
                         <!-- <span class="right badge badge-danger">New</span> -->
                         </p>
                     </a>
-                <?php } ?>
-            </li>
+                </li>
+            <?php } ?>
             <!-- 
             <li class="nav-header">LABELS</li>
             <li class="nav-item">

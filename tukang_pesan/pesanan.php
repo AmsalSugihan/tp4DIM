@@ -1,39 +1,100 @@
 <?php
 	include "session_pesanan.php";
 	include "pesanan_konek.php";
+  include "../page_layout/head.php";
 ?>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0"><?php echo @$title ?></h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><?php echo @$title ?></li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Thesisku</title>
+<section class="content">
+    <div class="container-fluid">
+    <!-- ########## DIBAWAH SINI BARU ISI KONTENNYA ################## -->
+  <div class="card">
+    <div class="card-header">
+        <h2 class="card-title">Data Pesanan</h2>
+        <a href="pesanan_form.php" class="btn btn-outline-primary float-right">
+            <i class="fas fa-plus"></i> Tambah Pesanan
+        </a>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table class="table table-bordered table-striped list_datatable">
+            <thead>        
+                <tr>
+                    <th>NO.</th>
+                    <th>Nama Supplier</th>
+                    <th>Nama Barang</th>
+                    <th>Pesan Barang</th>                        
+                    <th>Satuan</th>
+                    <th>Jumlah Total</th>
+                    <th>Waktu Tunggu</th>
+                    <th>Pemakaian Barang</th>
+                    <th>Pakai Barang</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                <?php
+                    foreach ($DaftarPesanan as $key => $data) {
+                ?>
+                    <td> <?php echo $key+1 ?> </td>
+                    <td> <?php echo $data["nama_pemesan"] ?> </td>
+                    <td> <?php echo $data["nama_barang"] ?> </td>
+                    <td align="center"> <?php echo $data["jumlah_pesanan"] ?> </td>
+                    <td align="center"> <?php echo $data["satuan"] ?> </td>
+                    <td align="center"> <?php echo $data["jumlah_total"] ?> </td>
+                    <td align="center"> <?php echo $data["lead_time"] ?> </td>
+                    <td align="center"> <?php echo $data["pakai"] ?> </td>
+                    <td>
+                        <div class="btn-group">
+                            <a href="pakai_barang.php?id=<?php echo $data['id_pesanan'] ?>" title="Pakai Barang" class="btn btn-sm btn-outline-info">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </a>
+                        </div>
+                    </td>
+                   
+                    
+                </tr>
+                    <?php
+                    }
+                ?>   
+            </tbody> 
+            <tfoot>
+                <tr>
+                    <th>NO.</th>
+                    <th>Nama Supplier</th>
+                    <th>Nama Barang</th>
+                    <th>Pesan Barang</th>                        
+                    <th>Satuan</th>
+                    <th>Jumlah Total</th>
+                    <th>Waktu Tunggu</th>
+                    <th>Pemakaian Barang</th>
+                    <th>Pakai Barang</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /.card-body -->
+    </div>
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    
-	<?php
-		include "navbar.php";
-		include "pesanan_tambah.php";				
-		include "pesanan_tabel.php";
-		
-	?>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-  </body>
-</html>
+  <!-- ########## KONTENNYA TULIS SAMPAI SEBELUM SINI ################## -->
+  </div>
+</section>
+<?php
+  include "../page_layout/footer.php";
+?>
