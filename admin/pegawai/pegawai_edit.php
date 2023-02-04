@@ -25,8 +25,11 @@ include "../../class/bagian.php";
 	$i=1;
 ?>
 
-<div class="container-fluid">
-    	<div class="col-md-7 col-md-offset-2">
+
+<section class="content">
+    <div class="container-fluid">
+      
+	<div class="col-md-7 col-md-offset-2">
     		<form class="form-horizontal" method="post" action="pegawai_update.php">
     			<?php
 
@@ -39,47 +42,37 @@ include "../../class/bagian.php";
                 <legend> Form Edit Pegawai </legend>
                 <input type="hidden" name="id_pegawai" value="<?php echo $value['id_pegawai'] ?>">
                 <div class="form-group">
-                	<label for="username" class="col-md-2"> Username  </label>
+                	<label for="username" class="col-md-4"> Username  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="username" name="username" value="<?php echo $value['username']; ?>">
                     </div>
                 </div>
-                <br>
-                
                 <div class="form-group">
-                	<label for="password" class="col-md-2"> Password  </label>
+                	<label for="password" class="col-md-4"> Password  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="password" name="password" value="<?php echo $value['password']; ?>">
                     </div>
                 </div>
-                <br>
-                
                 <div class="form-group">
-                	<label for="nama_pegawai" class="col-md-2"> Nama Pegawai  </label>
+                	<label for="nama_pegawai" class="col-md-4"> Nama Pegawai  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="nama pegawai" name="nama_pegawai" value="<?php echo $value['nama_pegawai']; ?>">
                     </div>
                 </div>
-                <br>
-                
                 <div class="form-group">
-                	<label for="alamat_pegawai" class="col-md-2"> Alamat Pegawai  </label>
+                	<label for="alamat_pegawai" class="col-md-4"> Alamat Pegawai  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="alamat pegawai" name="alamat_pegawai" value="<?php echo $value['alamat_pegawai']; ?>">
                     </div>
                 </div>
-                <br>
-                
                 <div class="form-group">
-                	<label for="handphone_pegawai" class="col-md-2"> Handphone Pegawai  </label>
+                	<label for="handphone_pegawai" class="col-md-4"> Handphone Pegawai  </label>
                 	<div class="col-md-7">
                     	<input type="text" class="form-control" id="hp_pegawai" name="hp_pegawai" value="<?php echo $value['hp_pegawai']; ?>">
                     </div>
                 </div>
-                <br>
-                
                 <div class="form-group">
-                	<label for="id_bagian" class="col-md-2"> Bagian  </label>
+                	<label for="id_bagian" class="col-md-4"> Bagian  </label>
                     <div class="col-md-7">
                 	<select class="form-control" name="id_bagian" id="id_bagian">
                           	<?php
@@ -92,8 +85,6 @@ include "../../class/bagian.php";
                           </select>
                           </div>
                 </div>
-                <br>
-                
                 <div class="form-group">
                 	<div class="col-md-7 col-md-offset-2">
                 		<input type="submit" class="btn btn-md btn-primary" name="update" value="Update" >
@@ -109,5 +100,6 @@ include "../../class/bagian.php";
     		</form>
         </div>
     </div>
+</section>
     
     <!-- akhir form -->
