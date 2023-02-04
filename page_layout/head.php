@@ -37,10 +37,6 @@
         
         <!-- wrapper -->
         <div class="wrapper">
-            <!-- Preloader -->
-            <!-- <div class="preloader flex-column justify-content-center align-items-center">
-                <img class="animation__shake" src="<?php echo '../assets/logos/ijm-logo.png' ?>" alt="IJMLogo" height="60" width="60">
-            </div> -->
             <?php
               include "navbar.php";
               include "sidebar.php";

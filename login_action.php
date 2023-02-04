@@ -21,10 +21,12 @@
 			//$_SESSION['level'] = $value['id_level'];
 			$_SESSION['bagian'] = $value['id_bagian'];
 			$_SESSION['nama'] = $value['nama_pegawai'];
+			$_SESSION['siteUrl'] = 'http://localhost/eoq';
 
 			if ($value['id_bagian'] == '7') // SILAHKAN MENYESUAIKAN PAK
 			{
 				// redirect berdasarkan level user
+				$_SESSION['bagian_name'] = 'admin';
 				header("location:admin/index.php");
 			}
 			elseif($value['id_bagian'] == '8')

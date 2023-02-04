@@ -38,11 +38,11 @@
 <!-- AdminLTE App -->
 <script src="<?php echo '../assets/AdminLTE/dist/js/adminlte.js' ?>"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?php echo '../assets/AdminLTE/dist/js/demo.js' ?>"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- <script src="<?php // echo base_url('assets/AdminLTE/dist/js/pages/dashboard.js') ?>"></script> -->
 
-<script>
+<!-- <script>
   $(function () {
     $('.list_datatable').DataTable({
       "paging": true,
@@ -83,4 +83,4 @@
     return event.keyCode >= 48 && event.keyCode <= 57 || event.keyCode == 46;
   }
   
-</script>
+</script> -->

@@ -1,71 +1,71 @@
 <?php
 	include "session_admin.php";
+  include "../page_layout/head.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Thesisku</title>
-
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/stylesheet.css" rel="stylesheet">
-
-    <!--[endif]-->
-  </head>
-  <body>
-    
-	<?php
-		include "navbar.php";
-	?>
-	<!--strat-->
-<div class="accordion horizontal">
-    <ul>
-        <li>
-            <input type="radio" id="vert-1" name="vert-accordion" checked="checked" />
-            <label for="vert-1"> EOQ </label>
-            <div class="content">
-				<div class="col-md-7">
-				<img src="../gambar/big_thumb.jpg" />
-				
-			</div>
-			</div>
-        </li>
-        <li>
-            <input type="radio" id="vert-2" name="vert-accordion" />
-            <label for="vert-2">Buffer&nbsp; Stock</label>
-            <div class="content">
-                <div class="col-md-8">
-			<img src="../gambar/Demand.gif" />
-				</div>				
-				
-
-			</div>
-        </li>
-        <li>
-            <input type="radio" id="vert-3" name="vert-accordion" />
-            <label for="vert-3">ReOrder&nbsp; Point</label>
-            <div class="content">
-                <div class="col-md-6">
-					<img src="../gambar/16fig11.jpg" />
-				</div>				
-				
-			</div>
-        </li>
-        	
-			</div>
-        </li>
-    </ul>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0"><?php echo @$title ?></h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active"><?php echo @$title ?></li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
 </div>
-    <!--end-->
-    
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-  </body>
-</html>
+<section class="content">
+    <div class="container-fluid">
+<!-- ########## DIBAWAH SINI BARU ISI KONTENNYA ################## -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"></h3>
+        </div>
+
+        <div class="card-body">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../gambar/big_thumb.jpg" height="400" width="200" alt="EOQ">
+              </div>
+
+              <div class="carousel-item">
+                <img class="d-block w-100" src="../gambar/Demand.gif" height="400" width="200" alt="Buffer Stock">
+              </div>
+              
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="../gambar/16fig11.jpg" height="400" width="200" alt="ReOrder Point">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-custom-icon" aria-hidden="true">
+                <i class="fas fa-chevron-left"></i>
+              </span>
+              <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-custom-icon" aria-hidden="true">
+                <i class="fas fa-chevron-right"></i>
+              </span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+<?php
+  include "../page_layout/footer.php";
+?>

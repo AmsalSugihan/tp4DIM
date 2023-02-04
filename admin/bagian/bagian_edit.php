@@ -18,8 +18,10 @@ include "../../class/bagian.php";
 	$i=1;
 ?>
 
-<div class="container-fluid">
-    	<div class="col-md-7 col-md-offset-2">
+<section class="content">
+    <div class="container-fluid">
+      
+	<div class="col-md-7 col-md-offset-2">
     		<form class="form-horizontal" method="post" action="bagian_update.php">
     			<?php
 
@@ -51,5 +53,5 @@ include "../../class/bagian.php";
     		</form>
         </div>
     </div>
+</section>
     
-    <!-- akhir form -->
