@@ -42,9 +42,9 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!-- <script src="<?php // echo base_url('assets/AdminLTE/dist/js/pages/dashboard.js') ?>"></script> -->
 
-<!-- <script>
+<script>
   $(function () {
-    $('.list_datatable').DataTable({
+    $('.list_datatable2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": true,
@@ -83,4 +83,4 @@
     return event.keyCode >= 48 && event.keyCode <= 57 || event.keyCode == 46;
   }
   
-</script> -->
+</script>
