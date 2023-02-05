@@ -121,6 +121,27 @@
                     </a>
                 </li>
             <?php } ?>
+
+            <?php if($_SESSION['bagian'] == '8'){?>
+                <li class="nav-item">
+                    <a href="<?php echo $_SESSION['siteUrl']?>/manager/index.php" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                        EOQ
+                        <!-- <span class="right badge badge-danger">New</span> -->
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?php echo $_SESSION['siteUrl']?>/manager/rop.php" class="nav-link">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                        ROP
+                        <!-- <span class="right badge badge-danger">New</span> -->
+                        </p>
+                    </a>
+                </li>
+            <?php } ?>
             <!-- 
             <li class="nav-header">LABELS</li>
             <li class="nav-item">

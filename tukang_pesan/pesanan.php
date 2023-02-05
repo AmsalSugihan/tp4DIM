@@ -55,11 +55,11 @@
                     <td> <?php echo $key+1 ?> </td>
                     <td> <?php echo $data["nama_pemesan"] ?> </td>
                     <td> <?php echo $data["nama_barang"] ?> </td>
-                    <td align="center"> <?php echo $data["jumlah_pesanan"] ?> </td>
+                    <td align="center"> <?php echo number_format(@$data["jumlah_pesanan"], 0) ?> </td>
                     <td align="center"> <?php echo $data["satuan"] ?> </td>
-                    <td align="center"> <?php echo $data["jumlah_total"] ?> </td>
+                    <td align="center"> <?php echo number_format(@$data["jumlah_total"], 0) ?> </td>
                     <td align="center"> <?php echo $data["lead_time"] ?> </td>
-                    <td align="center"> <?php echo $data["pakai"] ?> </td>
+                    <td align="center"> <?php echo number_format(@$data["pakai"], 0) ?> </td>
                     <td>
                         <div class="btn-group">
                             <a href="pakai_barang.php?id=<?php echo $data['id_pesanan'] ?>" title="Pakai Barang" class="btn btn-sm btn-outline-info">
